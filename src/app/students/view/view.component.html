@@ -1,0 +1,29 @@
+<table class="table table-strip">
+    <tr class="bg-dark text-white">
+        <td>ID</td>
+        <td>Username</td>
+        <td>Firstname</td>
+        <td>Lastname</td>
+        <td>Age</td>
+        <td>Salary</td>
+        <td>Action</td>
+    </tr>
+
+    <tr *ngFor="let user of this.users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.firstname}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.salary}}</td>
+        <td>
+            <a href="javascript:void(0);" class="btn btn-success btn-sm" (click)="edit(user)">Edit</a>&nbsp;
+            <a href="javascript:void(0);" class="btn btn-danger btn-sm" (click)="deleteUser(user)">Delete</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td><a [routerLink]="['/add']" class="btn btn-primary">Add User</a></td>
+        <td colspan="6"*ngIf="token"><button class="btn btn-danger" (click)="logOut()">Log Out</button></td>
+    </tr>
+</table>

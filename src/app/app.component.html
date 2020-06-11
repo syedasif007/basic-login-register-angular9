@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 style="margin: auto;">Welcome</h1>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Options:</h3>
+        </div>
+        <div class="col-md-8">
+            <a [routerLink]="['/login']" class="btn btn-warning">Login</a>&nbsp;
+            <a [routerLink]="['/add']" class="btn btn-primary">Add User</a>&nbsp;
+            <a [routerLink]="['/view']" class="btn btn-success">View User</a>
+        </div>
+    </div>
+    <br>
+    <router-outlet></router-outlet>
+</div>
